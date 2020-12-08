@@ -105,7 +105,7 @@ table {
 .login1 {
     grid-area: 1 / 11 / 2 / 12;
     width: 100%;
-    height: 50%;
+    height: 35%;
     align-self: center;
     border-radius: 35px;
     font-family: 'Quicksand', sans-serif;
@@ -185,31 +185,236 @@ table {
     align-self: center;
     z-index: 1;
     opacity: 20%;
-    mix-blend-mode: multiply;
+    transform: translateY(-10em);
+    animation: size 10s ease-in-out infinite;
+}
+
+@keyframes size {
+    0%{
+        transform: translateY(-10em) scale(1.05,1.05);
+    }
+    50%{
+        transform: translateY(-10em) scale(0.9,0.9);
+    }
+    100%{
+        transform: translateY(-10em) scale(1.05,1.05);
+    }
 }
 
 .board {
     width: 28em;
     z-index: 2;
     align-self: center;
+    animation: bounce2 10s ease-in-out infinite;
+}
+
+@keyframes bounce2 {
+    0%{
+        transform: translateY(0em);
+    }
+    50%{
+        transform: translateY(1em);
+    }
+    100%{
+        transform: translateY(0em);
+    }
 }
 
 .piece1 {
     width: 5em;
     align-self: center;
     z-index: 3;
-    transform: translateY(10.3em);
     width: 2em;
+}
+
+/* black pieces */
+
+.p2 {
+    transform: translateX(1.6em) translateY(9.5em);
+    animation: bounce3 10s ease infinite;
+}
+
+@keyframes bounce3 {
+    0%{
+        transform: translateX(1.6em) translateY(9.5em);
+    }
+    50%{
+        transform: translateX(1.6em) translateY(8em);
+    }
+    100%{
+        transform: translateX(1.6em) translateY(9.5em);
+    }
+}
+
+.p3 {
+    transform: translateX(-1.6em) translateY(9em);
+    animation: bounce4 10s ease infinite;
+    animation-delay: 1.5s;
+}
+
+@keyframes bounce4 {
+    0%{
+        transform: translateX(-1.6em) translateY(9em);
+    }
+    50%{
+        transform: translateX(-1.6em) translateY(7em);
+    }
+    100%{
+        transform: translateX(-1.6em) translateY(9em);
+    }
+}
+
+.p4 {
+    transform: translateX(-4.8em) translateY(12.6em);
+    animation: bounce5 10s ease-in-out infinite;
+    animation-delay: 1.0s;
+}
+
+@keyframes bounce5 {
+    0%{
+        transform: translateX(-4.8em) translateY(12.6em);
+    }
+    50%{
+        transform: translateX(-4.8em) translateY(10em);
+    }
+    100%{
+        transform: translateX(-4.8em) translateY(12.6em);
+    }
+}
+
+.p5 {
+    transform: translateX(-1.7em) translateY(17em);
+    animation: bounce6 10s ease-in-out infinite;
+    animation-delay: 2.0s;
+}
+
+@keyframes bounce6 {
+    0%{
+        transform: translateX(-1.7em) translateY(17em);
+    }
+    50%{
+        transform: translateX(-1.7em) translateY(13em);
+    }
+    100%{
+        transform: translateX(-1.7em) translateY(17em);
+    }
+}
+
+.p6 {
+    transform: translateX(-8.3em) translateY(10em);
+    animation: bounce7 10s ease-in-out infinite;
+    animation-delay: 2.5s;
+}
+
+@keyframes bounce7 {
+    0%{
+        transform: translateX(-8.3em) translateY(10em);
+    }
+    50%{
+        transform: translateX(-8.3em) translateY(3em);
+    }
+    100%{
+        transform: translateX(-8.3em) translateY(10em);
+    }
 }
 
 .piece2 {
     width: 5em;
     align-self: center;
     z-index: 3;
-    transform: translateY(5em) translateX(3em);
     width: 2em;
 }
 
+/* red pieces */
+
+.p7 {
+    transform: translateY(11.9em) translateX(-1.6em);
+    animation: bounce8 10s ease-in-out infinite;
+}
+
+@keyframes bounce8 {
+    0%{
+        transform: translateY(11.9em) translateX(-1.6em);
+    }
+    50%{
+        transform: translateY(7em) translateX(-1.6em);
+    }
+    100%{
+        transform: translateY(11.9em) translateX(-1.6em);
+    }
+}
+
+.p8 {
+    transform: translateY(8em) translateX(2em);
+    animation: bounce9 10s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+
+@keyframes bounce9 {
+    0%{
+        transform: translateY(8em) translateX(2em);
+    }
+    50%{
+        transform: translateY(6em) translateX(2em);
+    }
+    100%{
+        transform: translateY(8em) translateX(2em);
+    }
+}
+
+.p9 {
+    transform: translateY(13em) translateX(5em);
+    animation: bounce10 10s ease-in-out infinite;
+    animation-delay: 2.5s;
+}
+
+@keyframes bounce10 {
+    0%{
+        transform: translateY(13em) translateX(5em);
+    }
+    50%{
+        transform: translateY(6em) translateX(5em);
+    }
+    100%{
+        transform: translateY(13em) translateX(5em);
+    }
+}
+
+.p10 {
+    transform: translateY(21em) translateX(4.8em);
+    animation: bounce11 10s ease-in-out infinite;
+    animation-delay: 2.0s;
+}
+
+@keyframes bounce11 {
+    0%{
+        transform: translateY(21em) translateX(4.8em);
+    }
+    50%{
+        transform: translateY(16em) translateX(4.8em);
+    }
+    100%{
+        transform: translateY(21em) translateX(4.8em);
+    }
+}
+
+.p11 {
+    transform: translateY(19.3em) translateX(8em);
+    animation: bounce12 10s ease-in-out infinite;
+    animation-delay: 1.5s;
+}
+
+@keyframes bounce12 {
+    0%{
+        transform: translateY(19.3em) translateX(8em);
+    }
+    50%{
+        transform: translateY(17em) translateX(8em);
+    }
+    100%{
+        transform: translateY(19.3em) translateX(8em);
+    }
+}
 
 /* Background elements */
 
