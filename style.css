@@ -65,7 +65,8 @@ table {
     --pink: #FFC8E6;
     --darkyellow: #E8B3A2;
     --yellow: #FFE6BB;
-    --gradient: linear-gradient(to top right, #BBCDFF, #CFB6E8)
+    --gradient: linear-gradient(to top right, #BBCDFF, #CFB6E8);
+    --grey: #333333;
 }
 
 /* Header - ROW 1 */
@@ -77,12 +78,13 @@ table {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     align-content: center;
+    z-index: 1;
 }
 
 .logo1 {
     grid-area: 1 / 3 / 2 / 5;
     height: auto;
-    max-width: 7em;
+    max-width: 10em;
     min-width: 5em;
 }
 
@@ -92,6 +94,12 @@ table {
     place-items: center;
     justify-content: space-around;
     font-weight: 600;
+    color: var(--grey);
+}
+
+.navigation a {
+    color: var(--grey);
+    text-decoration: none;
 }
 
 .login1 {
@@ -102,6 +110,9 @@ table {
     border-radius: 35px;
     font-family: 'Quicksand', sans-serif;
     font-weight: 700;
+    background-color: var(--pink);
+    border: 1px solid #EAEAEA;
+    /* box-shadow: 2px 4px 2px #cccccc; */
 }
 
 /* ROW 2 */
@@ -112,6 +123,8 @@ table {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     height: calc(100vh - 150px -  1em);
+    z-index: 1;
+    color: var(--grey);
 }
 
 .textBox-r2 {
@@ -120,7 +133,7 @@ table {
 }
 
 .textBox-r2 h1 {
-    font-size: 2.5em;
+    font-size: 3em;
     font-weight: 900;
     margin-bottom: 1em;
 }
@@ -134,7 +147,9 @@ table {
 
 .textBox-r2 p {
     margin-bottom: 1em;
-    width: 75%;
+    width: 100%;
+    font-size: 1.18em;
+    font-weight: 500;
 }
 
 .buttons-r2 button {
@@ -144,19 +159,18 @@ table {
     border-radius: 20px;
     font-family: 'Quicksand', sans-serif;
     font-weight: 700;
-    
+    font-size: 1.18;
+    color: var(--grey);
 }
 
 .signup-r2 {
     background-color: var(--purple);
     border: 1px solid #EAEAEA;
-    box-shadow: 2px 4px 2px #cccccc;
 }
 
 .Login-r2 {
     background-color: #ffffff;
     border: 1px solid #EAEAEA;
-    box-shadow: 2px 4px 2px #cccccc;
 }
 
 .container2-r2 {
@@ -167,22 +181,46 @@ table {
 }
 
 .shadow {
-    width: 26em;
+    width: 30em;
     align-self: center;
     z-index: 1;
     opacity: 20%;
-
+    mix-blend-mode: multiply;
 }
 
 .board {
-    width: 25em;
+    width: 28em;
     z-index: 2;
     align-self: center;
-    /* transform: translateY(10em); */
 }
 
 .piece1 {
     width: 5em;
     align-self: center;
     z-index: 3;
+    transform: translateY(10.3em);
+    width: 2em;
+}
+
+.piece2 {
+    width: 5em;
+    align-self: center;
+    z-index: 3;
+    transform: translateY(5em) translateX(3em);
+    width: 2em;
+}
+
+
+/* Background elements */
+
+.circle1 {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 90vh;
+    width: 55vw;
+    border-radius: 0 0 0 100em;
+    background: rgb(207,182,232);
+    background: linear-gradient(45deg, rgba(207,182,232,1) 10%, rgba(187,205,255,1) 90%);
+    z-index: 0;
 }
