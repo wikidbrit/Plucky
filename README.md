@@ -41,5 +41,3 @@ I came up with the name Plucky and designed an original logo for the project alo
 Once the design was finished I started coding the landing page. 
 
 I hope so likes it. 
-
-[![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=wikidbrit)](https://github.com/anuraghazra/github-readme-stats)
